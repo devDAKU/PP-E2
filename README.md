@@ -9,6 +9,38 @@ let WariancjeBezPowtorzen n k =
 
     licznik / mianownik
 ```
+### F#: Napisz program, który wczytując od użytkownika liczby z klawiatury zapamięta liczby parzyste. (Wprowadzanie zakończ, jeżeli użytkownik poda 0). Po zakończeniu wprowadzania danych program powinien wyświetlić je w odwrotnej kolejności (od ostatniej wprowadzonej do pierwszej).
+
+```
+let bezpiecznePodawanieLiczby =
+    try 
+        Some(int(Console.ReadLine()))
+    with
+        | :? System.FormatException ->  None
+
+
+let podajLiczbe () = 
+    let lista: int list = []
+
+    let rec dodajLiczbe lista =   
+        Console.Write "Podaj liczbe: "
+
+        let v = bezpiecznePodawanieLiczby
+
+        match v with
+        | Some(x) -> 
+            if(x <> 0 && x % 2 = 0) then
+                    dodajLiczbe (lista @ [x])
+                elif (x = 0) then
+                    Console.WriteLine "Odwrocona lista wpisanych liczb parzystych: "
+                    lista |> List.rev |> List.iter (fun v -> printfn "%d" v)
+                else    
+                    dodajLiczbe lista
+        | None -> printfn "Podano zły format!"; 
+
+    dodajLiczbe lista
+```
+
 
 ### F#: Zdefiniuj nowy typ danych reprezentujący drzewo binarne. Następnie napisz program, który wyświetli elementy tego drzewa w kolejności postorder. Zademonstruj jego działanie.
 
