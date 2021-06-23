@@ -9,6 +9,39 @@ let WariancjeBezPowtorzen n k =
 
     licznik / mianownik
 ```
+### F#: Napisz funkcję, która określi ile razy w danym łańcuchu znaków wystąpiły dowolne cyfry. Przykładowo dla łańcucha 'Ala 123 ma k1ota' funkcja powinna zwrócić 4.
+
+```
+ open System
+
+let rec liczZnaki slowo n ascii =
+    let znak = (char(ascii))
+    let rec liczZnak (slowo:string) (znak:char) i suma= 
+        if i=slowo.Length then
+            printfn "Wynik %A %A" znak suma
+        else
+            if (slowo.[i] = znak) then
+                liczZnak slowo znak (i+1) (suma+1)
+            else
+                liczZnak slowo znak (i+1) suma
+    liczZnak slowo znak 0 0
+
+    if n < 1 then
+        printfn "Koniec"
+    else
+        liczZnaki slowo (n-1) (ascii+1)
+
+
+[<EntryPoint>]
+let main argv =
+    printfn "Podaj zdanie"  
+    let tekst = (string(Console.ReadLine()))
+    let n = 9
+    let ascii = 48
+    (liczZnaki tekst n ascii)
+    0 // return an integer exit code 
+```
+
 ### F#: Napisz program, który wczytując od użytkownika liczby z klawiatury zapamięta liczby parzyste. (Wprowadzanie zakończ, jeżeli użytkownik poda 0). Po zakończeniu wprowadzania danych program powinien wyświetlić je w odwrotnej kolejności (od ostatniej wprowadzonej do pierwszej).
 
 ```
