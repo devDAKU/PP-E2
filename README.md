@@ -1,6 +1,6 @@
 # PP-E2
  
-F#: Napisz funkcję, która obliczy wartość wariancji bez powtórzeń zgodnie ze wzorem n!/(n-k)!
+### F#: Napisz funkcję, która obliczy wartość wariancji bez powtórzeń zgodnie ze wzorem n!/(n-k)!
 
 ```
 let WariancjeBezPowtorzen n k = 
@@ -10,7 +10,7 @@ let WariancjeBezPowtorzen n k =
     licznik / mianownik
 ```
 
-F#: Zdefiniuj nowy typ danych reprezentujący drzewo binarne. Następnie napisz program, który wyświetli elementy tego drzewa w kolejności postorder. Zademonstruj jego działanie.
+### F#: Zdefiniuj nowy typ danych reprezentujący drzewo binarne. Następnie napisz program, który wyświetli elementy tego drzewa w kolejności postorder. Zademonstruj jego działanie.
 
 ```
  open System
@@ -32,7 +32,7 @@ let main argv =
         printfn "%d" x
     0 
 ```
-C#: Stwórz klasy na podstawie przykładów:
+### C#: Stwórz klasy na podstawie przykładów:
 ```
     var ksiazki = new [] {
          new Ksiazka {Tytul = "Pan Tadeusz", RokWydania = 1998, Gatunek = 1, Cena = 30},
@@ -49,7 +49,7 @@ C#: Stwórz klasy na podstawie przykładów:
          };
 ```
 
-Napisz zapytanie Linq, które zwróci obiekt anonimowy zawierający nazwę gatunku oraz listę tytułów książek, do których jest przypisany
+### Napisz zapytanie Linq, które zwróci obiekt anonimowy zawierający nazwę gatunku oraz listę tytułów książek, do których jest przypisany
 
 ```
 using System;
@@ -120,7 +120,7 @@ namespace zadanie3
 }
 ```
 
-C#: Stwórz generyczną klasę Lista implementującą listę łączoną i przechowującą wartość dowolnego typu. Stwórz ją w taki sposób, aby każdy węzeł był elementem tylko do odczytu. Następnie napisz metodę, która będzie poszukiwała elementu najmniejszego (dla dowolnego typu). Zademonstruj działanie klasy.
+### C#: Stwórz generyczną klasę Lista implementującą listę łączoną i przechowującą wartość dowolnego typu. Stwórz ją w taki sposób, aby każdy węzeł był elementem tylko do odczytu. Następnie napisz metodę, która będzie poszukiwała elementu najmniejszego (dla dowolnego typu). Zademonstruj działanie klasy.
 
 ```
 using System;
