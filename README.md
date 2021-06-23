@@ -50,7 +50,7 @@ let main argv =
 ```
 
 ### Napisz zapytanie Linq, które zwróci obiekt anonimowy zawierający nazwę gatunku oraz listę tytułów książek, do których jest przypisany
-
+ 
 ```
 using System;
 using System.Linq;
