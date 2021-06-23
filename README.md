@@ -105,8 +105,10 @@ let main argv =
          new Ksiazka {Tytul = "W pustyni i w puszczy", RokWydania = 1990, Gatunek = 2, Cena = 30},
          new Ksiazka {Tytul = "Lalka", RokWydania = 1990, Gatunek = 1, Cena = 50},
          new Ksiazka {Tytul = "Programowanie funkcyjne w języku C#", RokWydania = 2019, Gatunek = 3, Cena = 71.20},
-         new Ksiazka {Tytul = "Programowanie funkcyjne z JavaScriptem", RokWydania = 2017, Gatunek = 3, Cena = 29.40},};
-         var gatunki = new [] {
+         new Ksiazka {Tytul = "Programowanie funkcyjne z JavaScriptem", RokWydania = 2017, Gatunek = 3, Cena = 29.40},
+         };
+         
+    var gatunki = new [] {
          new Gatunek { id = 1, Nazwa = "Literatura piękna" },
          new Gatunek { id = 2, Nazwa = "Przygodowa" },
          new Gatunek { id = 3, Nazwa = "Programowanie" },
